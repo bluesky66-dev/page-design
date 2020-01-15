@@ -15,7 +15,6 @@
 
 #total  .bg {
     position: relative;
-    height: 780px;
     background: url(../img/home-hero.jpg) center center / cover no-repeat;
     background-position: center bottom!important;
     padding-top: 50px;
@@ -27,7 +26,9 @@
     padding-bottom: 185px;
 }
 
-
+#total  .icon{
+    margin-top: -49px;
+}
 
 #total  .bg:after {
     content: '';
@@ -44,6 +45,7 @@
 #total  .img-hover{
     text-align:center;
     z-index:100;
+    margin-bottom:40px;
 }
 
 #total  .img-hover button{
@@ -107,6 +109,12 @@
 .text{
     padding-top: 60px;
     padding-bottom:60px;
+}
+
+h1 {
+    color: #436B95;
+    font-size: 24px;
+    font-style: bold;
 }
 
 
