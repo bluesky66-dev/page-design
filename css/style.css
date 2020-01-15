@@ -5,8 +5,7 @@
 #total  .menu a{
     color:white;
     font-size:25px;
-    padding-left: 40px;
-    padding-right: 21px;
+    padding-right: 35px;
 }
 
 #total  .menu  .dropdown-item{
@@ -19,15 +18,17 @@
     background-position: center bottom!important;
     padding-top: 50px;
     padding-left: 50px;
+    height: 431px;
  }
 
 #total  .bg  .cps img{
     width:25%;
-    padding-bottom: 185px;
+    /*padding-bottom: 185px;*/
 }
 
-#total  .icon{
-    margin-bottom: 85px;
+#point  .icon{
+    margin-bottom: 40px;
+    margin-top: 109px;
 }
 
 #total  .bg:after {
@@ -42,26 +43,25 @@
 
 }
 
-#total  .img-hover{
+#point  .img-hover{
     text-align:center;
     z-index:100;
-    margin-bottom:40px;
 }
 
-#total  .img-hover button{
+#point  .img-hover button{
     width:350px;
     height:200px;
-    background-color:#ffffff;
+    background-color:#F6F6F6;
     border-radius:15px;
     border:0px;
     outline:none;
 }
 
-#total  .img-hover p{
+#point  .img-hover p{
     font-size:24px;
 }
 
-#total  .img-hover  .admin{
+#point  .img-hover  .admin{
     background-color:lightblue;
     border-radius:5px;
     margin: 0 auto;
@@ -71,7 +71,7 @@
     margin-top: 14px;
 }
 
-#total  .img-hover img {
+#point  .img-hover img {
     -webkit-transition: all .3s ease; /* Safari and Chrome */
     -moz-transition: all .3s ease; /* Firefox */
     -o-transition: all .3s ease; /* IE 9 */
@@ -79,7 +79,7 @@
     transition: all .3s ease;
     position:relative;
 }
-#total  .img-hover img:hover {
+#point  .img-hover img:hover {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transform:translateZ(0) scale(1.20); /* Safari and Chrome */
@@ -89,7 +89,7 @@
     transform:translatZ(0) scale(1.20);
 }
 
-#total  .img-hover:hover:after {
+#point  .img-hover:hover:after {
     content:"";
     position:absolute;
     top:0;
@@ -100,7 +100,7 @@
     border:1px solid #000;
 }
 
-#total  .grayscale {
+#point  .grayscale {
     -webkit-filter: brightness(1.10) grayscale(100%) contrast(90%);
     -moz-filter: brightness(1.10) grayscale(100%) contrast(90%);
     filter: brightness(1.10) grayscale(100%);
