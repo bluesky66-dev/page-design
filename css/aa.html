@@ -1,0 +1,384 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src = "https://www.googletagmanager.com/gtag/js?id=UA-147221475-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-147221475-1');
+    </script>
+    <script src = "https://www.parlicentre.info/js/jquery-1.11.1.min.js"></script>
+    <link href = "https://www.parlicentre.info/css/parlicentre/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src = "https://www.parlicentre.info/js/bootstrap.min.js"></script>
+    <link href = "https://www.parlicentre.info/css/parlicentre/ace-menu.css" rel = "stylesheet">
+    <script src = "https://www.parlicentre.info/js/ace-menu.js"></script>
+    <link href = "https://www.parlicentre.info/css/parlicentre/icps.css" rel = "stylesheet">
+    <script src = "https://www.parlicentre.info/js/site.js"></script>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="en">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv = "Content-Language" content = "en" />
+    <meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+    <meta name = "language" content = "English">
+    <meta name = "keywords" content = "" />
+    <meta name = "copyright" content = "International Centre For Parliamentary Studies" />
+    <meta name = "description" content = "The next event for the Professional Certificate in Legislative Drafting run by the International Centre For Parlimentary Studies will take place on 20th Jan 2020. You can book your place on this event here.">
+    <meta name = "author" content = "">
+    <meta http-equiv = "Description" content = "The Centre for Parliamentary Studies is an organisation based in London in the United Kingdom that exists to promote effective policy making and good governance through better interaction between Parliament and other stakeholders in society.">
+
+    <title>
+        Professional Certificate in Parliamentary Committees | International Centre For Parlimentary Studies
+    </title>
+
+    <script>
+        function htmlPageNextEventByEventPrototypeSlug( event_tab_menu_slug )
+        {
+            base_url = 'https://www.parlicentre.info/';
+
+            jsonGet = base_url + 'api/htmlPageNextEventByEventPrototypeSlug/index/event_prototype_slug/parliamentary-committees/event_tab_menu_slug/' + event_tab_menu_slug + '/';
+
+            var json = fireJson( jsonGet );
+
+            if( json.report == 'Success' )
+            {
+                $( '#info-area' ).html( json.html );
+            }
+
+            return false;
+        }
+
+
+
+        function htmlNextEventDateByEventPrototypeSlug()
+        {
+            base_url = 'https://www.parlicentre.info/';
+
+            jsonGet = base_url + 'api/htmlNextEventDateByEventPrototypeSlug/index/event_prototype_slug/parliamentary-committees/';
+
+            var json = fireJson( jsonGet );
+
+            if( json.report == 'Success' )
+            {
+                $( '#next-event' ).html( json.html );
+                var eventReference = json.eventReference;
+                if( eventReference != '' )
+                {
+                    $( '#booking-link' ).html( "<a href = 'https://bookings.parlicentre.org/book.php?event=" + eventReference + "'><i class = 'fa fa-heart' aria-hidden = 'true'></i><span class = 'title'>Book</span></a>" );
+
+                    var main_book_btn = "<a href = 'https://bookings.parlicentre.org/book.php?event=" + eventReference + "'>" +
+                        "<div class = 'row icps-box-with-shadow' style = 'padding-bottom: 18px;'>" +
+                        "<div class = 'col-sm-4 text-center'>" +
+                        "<img src = 'https://www.parlicentre.info/img/register.gif' alt = 'Register' class = 'img-responsive'>" +
+                        "</div><div class = 'col-sm-8'>" +
+                        "<button style = 'height: 100%; margin: 4px;' class = 'btn btn-primary btn-block icps-read-more-button lead-msg'>Book Your Place</button>" +
+                        "</div></div></a>";
+
+                    $( '#main-book-btn' ).html( main_book_btn );
+
+                    $( '#booking-link-box' ).css( 'visibility', 'visible' );
+                }
+                else
+                {
+                    $( '#next-event' ).html( 'London, UK' );
+                    $( '.lead-msg' ).html( 'Register Your Interest' );
+
+                    var main_book_btn = "<a href = 'https://www.parlicentre.info/registerInterest/index/course_id/" +
+                        json.event_prototype_id + "/'>" +
+                        "<div class = 'row icps-box-with-shadow' style = 'padding-bottom: 18px;'>" +
+                        "<div class = 'col-sm-4 text-center'>" +
+                        "<img src = 'https://www.parlicentre.info/img/register.gif' alt = 'Register' class = 'img-responsive'>" +
+                        "</div><div class = 'col-sm-8'>" +
+                        "<button style = 'height: 100%; margin: 4px;' class = 'btn btn-primary btn-block icps-read-more-button lead-msg'>Register Your Interest</button>" +
+                        "</div></div></a>";
+
+                    $( '#main-book-btn' ).html( main_book_btn );
+
+
+                }
+
+            }
+
+            return false;
+        }
+    </script>
+    <style>
+        #respMenu a
+        {
+            color: #c0c0c0;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+
+
+
+<nav>
+    <!-- Menu Toggle btn-->
+    <div class="menu-toggle">
+        <h3>Menu</h3>
+        <button type="button" id="menu-btn">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <!-- Responsive Menu Structure-->
+    <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
+    <ul id = "respMenu"
+        class = "ace-responsive-menu"
+        data-menu-style = "horizontal">
+        <li>
+            <a href = "https://www.parlicentre.info/site/page/view/index/">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <span class="title">Home</span>
+            </a>
+        </li>
+
+
+        <li><a href = "javascript:;">
+            <i class = "fa fa-cube" aria-hidden="true"></i>
+            <span class = "title">Course Details</span>
+        </a>
+
+            <ul>
+                <li>
+                    <a onclick = "htmlPageNextEventByEventPrototypeSlug( 'index' );">Overview</a>
+                </li>
+                <li>
+                    <a onclick = "htmlPageNextEventByEventPrototypeSlug( 'why-attend' );">Why Attend?</a>
+                </li>
+                <li>
+                    <a onclick = "htmlPageNextEventByEventPrototypeSlug( 'programme' );">Programme</a>
+                </li>
+                <li>
+                    <a onclick = "htmlPageNextEventByEventPrototypeSlug( 'trainers' );">Trainers</a>
+                </li>
+                <li>
+                    <a onclick = "htmlPageNextEventByEventPrototypeSlug( 'testimonials' );">Testimonials</a>
+                </li>
+                <li>
+                    <a onclick = "htmlPageNextEventByEventPrototypeSlug( 'photos' );">Photos</a>
+                </li>
+                <li>
+                    <a onclick = "htmlPageNextEventByEventPrototypeSlug( 'course-materials' );">Course Materials</a>
+                </li>
+            </ul>
+        </li>
+        <li><a href = "javascript:;">
+            <i class = "fa fa-cube" aria-hidden="true"></i>
+            <span class = "title">Logistics</span>
+        </a>
+
+            <ul>
+                <li>
+                    <a onclick = "htmlPageNextEventByEventPrototypeSlug( 'venue' );">Venue & Travel</a>
+                </li>
+                <li>
+                    <a onclick = "htmlPageNextEventByEventPrototypeSlug( 'accommodation' );">Accommodation</a>
+                </li>
+                <li>
+                    <a onclick = "htmlPageNextEventByEventPrototypeSlug( 'visas' );">Visas</a>
+                </li>
+            </ul>
+        </li>
+        <li id = "booking-link-box" style = "visibility: hidden;">
+            <a id = "booking-link"></a>
+        </li>
+        <li>
+            <a href = "https://www.parlicentre.info/site/page/view/contact/">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                <span class="title">Contact Us</span>
+            </a>
+        </li>
+
+        <div class = "float-right" id = "sign_in_navbar_link">
+        </div>
+    </ul>
+</nav>
+
+<!--Plugin Initialization-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#respMenu").aceResponsiveMenu({
+            resizeWidth: '768', // Set the same in Media query
+            animationSpeed: 'fast', //slow, medium, fast
+            accoridonExpAll: false //Expands all the accordion menu on click
+        });
+    });
+</script>
+
+
+
+<div class = "canvus">
+    <div class = "container-fluid">
+        &nbsp;
+        <div class = "row icps-intro">
+            <div class = "col-md-2">
+                <img src = "https://www.parlicentre.info/img/logo/icps-logo.jpg" class = "img img-thumbnail">
+            </div>
+            <div class = "col-md-2 d-none d-sm-block">
+                &nbsp;
+            </div>
+            <div class = "col-md-6 d-none d-sm-block">
+
+                <div id="full">
+                    <table width="960" border="0" height="250" cellpadding="0" cellspacing="0" style="background-image:url(https://www.parlicentre.info/img/carousel/slide-001.jpg); height:200px;">
+                        <tr>
+                            <td height="180">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style = "background-color: #fff; width: 100%; opacity: 0.8;">
+                                <div style = "font-size: 24px; color: #02006E; line-height: 28px; margin: 5px;">Professional Certificate in Parliamentary Committees<br />
+                                    <div style = "font-size: 18px" id = "next-event"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class = "col-md-2 d-none d-sm-block">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class = "row">
+
+            <div class = "col-sm-9" id = "info-area">
+
+            </div>
+
+            <div class = "col-sm-3">
+
+                <div class = "lead-msg">Book Your Place</div>
+
+                <div id = "main-book-btn"></div>
+
+                <div class = "row icps-box-with-shadow" style = "padding-bottom: 18px;">
+
+                    <div class = "col-sm-12 text-center">
+                        <a href = "https://www.managers.org.uk/" target = "_new">
+                            <img src = "https://www.parlicentre.info/img/cmi-wide-accredited.png" alt = "Chartered Management Institute" class = "img-responsive"></a>
+                        <br />
+                        <b>Approved Centre</b>
+                    </div>
+
+                </div>
+                <div class = "row icps-box-with-shadow" style = "padding-bottom: 18px;">
+
+                    <div class = "col-sm-12 text-center">
+                        <b>Accredited By:</b>
+                        <br />
+                        <a href = "https://www.asic.org.uk/" target = "_new"><img src = "https://www.parlicentre.info/img/asic-wide-accredited.png" alt = "Accreditation Service For International Colleges" class = "img-responsive"></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>	</div>
+</div>
+
+<!-- content -->
+
+
+
+
+<div class = "container-fluid">
+
+    <div class = "row icps-footer">
+
+        <div class = "col-sm">
+            <h6>
+                Company Information
+            </h6>
+            <p>
+                &copy; 2020 International Centre for Parliamentary Studies Ltd
+                <br />
+                Company No: 7379667
+                <br />
+                Registered in England and Wales
+            </p>
+        </div>
+        <div class = "col-sm">
+            <h6>
+                Contact Information
+            </h6>
+            <p>
+                Tel: +44 (0) 20 3137 8648
+                <br />
+                Fax: +44 (0) 20 3137 1459
+                <br />
+                E-mail: <a href = "mailto:info@parlicentre.org">info@parlicentre.org</a>
+                <br />
+        </div>
+        <div class = "col-sm">
+            <h6>
+                Social Media
+            </h6>
+            <p>
+                <a href = "https://twitter.com/parlicentre" target="_blank" style="text-decoration: none;margin-right: 3px;">
+                    <img alt = "Twitter" style = "padding: 0px 0px 5px 0px; vertical-align: middle;" src = "https://www.parlicentre.org/img/logo/twitter.png" target = "_blank" border = "0" width = "24">
+                </a> Twitter
+                <br />
+                <a href = "https://www.linkedin.com/company/international-centre-for-parliamentary-studies" target="_blank" style="text-decoration: none;margin-right: 3px;">
+                    <img alt = "LinkedIn" style = "padding: 0px 0px 5px 0px; vertical-align: middle;" src = "https://www.parlicentre.org/img/logo/linkedin.png" target = "_blank" border = "0" width = "24">
+                </a> LinkedIn
+                <br />
+                <a href = "https://www.facebook.com/parlicentre/" target="_blank" style="text-decoration: none;">
+                    <img alt = "Facebook" style = "padding: 0px 0px 5px 0px; vertical-align: middle;" src = "https://www.parlicentre.org/img/logo/facebook.png" target = "_blank" border = "0" width = "24">
+                </a> Facebook
+            </p>
+        </div>
+        <div class = "col-sm">
+            <h6>
+                Sign Up For Our Newsletter
+            </h6>
+            <form action = "https://parlicentre.info/newsletter/" method = "post" >
+
+                <div class = "input-group">
+                    <input class = "form-control"
+                           required
+                           name = "email"
+                           type = "email"
+                           id = "email"
+                           placeholder = "Your email address" />
+                    <div class = "input-group-btn">
+                        <button class = "btn btn-default" type = "submit">&rarr;</button>
+                    </div>
+                </div>
+
+                <input type = "hidden" name = "mail_subject" value="International Centre for Parliamentary Studies" >
+                <input type = "hidden" name = "website" value = "" >
+                <input type = "hidden" name = "redirect_page" value = "http://www.parlcommittees.parlicentre.org/" >
+            </form>
+            <p>
+                We will keep you up to date with news, events and other great features.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    $( document ).ready(function() {
+        htmlNextEventDateByEventPrototypeSlug();
+        htmlPageNextEventByEventPrototypeSlug( 'index' );
+    });
+</script>
+
+</body>
+</html>
