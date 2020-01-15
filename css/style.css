@@ -26,9 +26,12 @@
     /*padding-bottom: 185px;*/
 }
 
+#total  .bg  .txt{
+    z-index: 1;
+}
+
 #point  .icon{
-    margin-bottom: 40px;
-    margin-top: 109px;
+    margin-top: 30px;
 }
 
 #total  .bg:after {
@@ -108,8 +111,7 @@
 }
 
 .text{
-    padding-top: 60px;
-    padding-bottom:60px;
+    padding-bottom: 30px;
 }
 
 h1 {
