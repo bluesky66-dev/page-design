@@ -19,6 +19,9 @@
     padding-top: 50px;
     padding-left: 50px;
  }
+#total  .bg  .cps{
+    z-index:100;
+}
 
 #total  .bg  .cps img{
     width:51%;
@@ -120,17 +123,14 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    #total  .bg  .txt  .txt1{
-        font-size:12px;
+      .text{
+        padding-left:40px;
+        padding-right:40px;
     }
 }
 
 
-@media (max-width: 768px) {
-    #total  .bg  .txt  .txt2{
-        font-size:12px;
-    }
-}
+
 
 /*====================
 	Footer
